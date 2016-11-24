@@ -1,12 +1,16 @@
 /**
  * Created by Menelaos Kotsollaris on 2016-11-24.
  *
- * Class Explanation: Contains the main method. Test Test
+ * Class Explanation: Contains the main method.
  */
 public class MainClass
 {
     public static void main(String[] args)
     {
-        System.out.println("hey:)");
+        Product
+                product =
+                new Product.Builder(1299.99, Product.ProductType.FOOD)
+                        .build();
+        System.out.println(product.computeFinalCost(3));
     }
 }
