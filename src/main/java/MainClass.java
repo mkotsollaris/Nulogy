@@ -1,7 +1,7 @@
 /**
  * Created by Menelaos Kotsollaris on 2016-11-24.
  *
- * Class Explanation: Contains the main method.
+ * Class Explanation: Contains the main method. Test
  */
 public class MainClass
 {
