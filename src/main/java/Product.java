@@ -17,7 +17,7 @@ class Product
         throw new AssertionError();
     }
 
-    /** Error Message */
+    /**Exception Message of the people's number*/
     static final String
             peopleNumberException =
             "peopleNumber must be equal or bigger than 0";

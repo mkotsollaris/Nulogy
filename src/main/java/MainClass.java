@@ -12,6 +12,5 @@ public class MainClass
                 new Product.Builder(1299.99, Product.ProductType.FOOD)
                         .build();
         System.out.println(product.computeFinalCost(3));
-        System.out.println(product);
     }
 }
