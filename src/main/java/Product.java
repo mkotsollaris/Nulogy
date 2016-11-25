@@ -23,9 +23,9 @@ class Product
             "peopleNumber must be equal or bigger than 0";
 
     /**
-     * Private constructor that instantiates a Product
+     * Private constructor that instantiates a Product.
      *
-     * @param builder the {@link Builder} object.
+     * @param builder the {@link Builder} object
      */
     private Product(Builder builder)
     {
@@ -42,10 +42,10 @@ class Product
     }
 
     /**
-     * @param peopleNumber the number of people that need to work on the job.
+     * @param peopleNumber the number of people that need to work on the job
      * @param flatMarkup   the flat markup price
      *
-     * @return the People Markup price
+     * @return the markup price of the people
      */
     private double computePeopleMarkup(int peopleNumber, double flatMarkup)
     {
@@ -57,7 +57,7 @@ class Product
     /**
      * @param flatMarkup the flat markup price
      *
-     * @return the Product type markup price
+     * @return the product type markup price
      */
     private double computeProductTypeMarkup(double flatMarkup)
     {
@@ -67,7 +67,7 @@ class Product
     /**
      * Computes the final cost by adding all the markup prices.
      *
-     * @param peopleNumber the number of people that need to work on the job.
+     * @param peopleNumber the number of people that need to work on the job
      *
      * @return the final cost after adding the markups
      */
@@ -104,7 +104,7 @@ class Product
 
     /**
      * The enum that contains the category of the product and its markup
-     * percentage that its dependant on each case.
+     * percentage.
      */
     enum ProductType
     {
