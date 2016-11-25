@@ -1,8 +1,8 @@
 /**
  * Created by Menelaos Kotsollaris on 2016-11-24.
  *
- * Class Explanation: The Product which contains the base price and the product
- * type.
+ * Class Explanation: The Product which contains the base price and the {@link
+ * ProductType} productType.
  */
 class Product
 {
@@ -17,7 +17,7 @@ class Product
         throw new AssertionError();
     }
 
-    /**Exception Message of the people's number*/
+    /** Exception Message of the people's number */
     static final String
             peopleNumberException =
             "peopleNumber must be equal or bigger than 0";
