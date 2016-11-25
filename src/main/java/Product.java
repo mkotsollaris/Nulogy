@@ -9,7 +9,7 @@ class Product
     //the base price
     private final double basePrice;
     //the product field
-    private ProductType productType;
+    private final ProductType productType;
 
     //ensures non-instantiability
     private Product()
@@ -88,7 +88,7 @@ class Product
         //the base price
         private final double basePrice;
         //the product field
-        private ProductType productType;
+        private final ProductType productType;
 
         Builder(double basePrice, ProductType productField)
         {
