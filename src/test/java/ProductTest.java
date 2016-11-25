@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by Menelaos Kotsollaris on 2016-11-24.
  *
- * Class Explanation: TODO
+ * Class Explanation: Contains testing scenarios of the Product class' methods.
  */
 public class ProductTest
 {

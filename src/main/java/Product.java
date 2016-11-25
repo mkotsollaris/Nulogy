@@ -30,7 +30,7 @@ class Product
     private Product(Builder builder)
     {
         basePrice = builder.basePrice;
-        productType = builder.productField;
+        productType = builder.productType;
     }
 
     /**
@@ -85,13 +85,15 @@ class Product
 
     static class Builder
     {
+        //the base price
         private final double basePrice;
-        private final ProductType productField;
+        //the product field
+        private ProductType productType;
 
         Builder(double basePrice, ProductType productField)
         {
             this.basePrice = basePrice;
-            this.productField = productField;
+            this.productType = productField;
         }
 
         Product build()
