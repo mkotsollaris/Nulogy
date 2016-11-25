@@ -8,7 +8,6 @@ class Product
 {
     //the base price
     private final double basePrice;
-
     //the product field
     private ProductType productType;
 
@@ -17,6 +16,11 @@ class Product
     {
         throw new AssertionError();
     }
+
+    /** Error Message */
+    static final String
+            peopleNumberException =
+            "peopleNumber must be equal or bigger than 0";
 
     /**
      * Private constructor that instantiates a Product
@@ -45,6 +49,8 @@ class Product
      */
     private double computePeopleMarkup(int peopleNumber, double flatMarkup)
     {
+        if(peopleNumber < 0)
+            throw new IllegalArgumentException(peopleNumberException);
         return peopleNumber * 0.012 * (flatMarkup + basePrice);
     }
 
@@ -67,6 +73,8 @@ class Product
      */
     double computeFinalCost(int peopleNumber)
     {
+        if(peopleNumber < 0)
+            throw new IllegalArgumentException(peopleNumberException);
         double flatMarkup = computeFlatMarkup();
         double peopleMarkup = computePeopleMarkup(peopleNumber, flatMarkup);
         double productFiledMarkup = computeProductTypeMarkup(flatMarkup);
@@ -94,9 +102,7 @@ class Product
 
     /**
      * The enum that contains the category of the product and its markup
-     * percentile that its dependant on each case.
-     *
-     * TODO consider adding extra types such as "Food" with 0 percentile?
+     * percentage that its dependant on each case.
      */
     enum ProductType
     {
@@ -105,23 +111,22 @@ class Product
         ELECTRONIC("Electronic", 0.02),
         OTHER("Other", 0);
 
+        /** The category */
         private String category;
+        /** The markup percentage */
         private double markup;
 
-        ProductType(String type, double markup)
+        ProductType(String category, double markup)
         {
-            this.category = type;
+            this.category = category;
             this.markup = markup;
         }
+    }
 
-        String getCategory()
-        {
-            return category;
-        }
-
-        double getMarkup()
-        {
-            return markup;
-        }
+    @Override public String toString()
+    {
+        return "This product has a category of: " + productType.category +
+                ", a markup percentage of " + productType.markup * 100 +
+                "% and a base price of: " + basePrice + " $.";
     }
 }
